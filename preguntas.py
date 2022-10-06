@@ -18,9 +18,9 @@ def pregunta_01():
     # retorna el dataframe con las dos columnas.
     
     df = pd.read_csv('amazon_cells_labelled.tsv',
-          sep='\t',
-          header=0,
-          names =['msg','lbl']
+          sep = '\t',
+          header = None,
+          names = ['msg','lbl']
           )
     df_tagged = df[df["lbl"].notnull()]
     df_untagged = df[df["lbl"].isna()]
